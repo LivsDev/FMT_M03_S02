@@ -18,7 +18,7 @@ function RegisterForm() {
 
     // Estrutura JSX do formulário
       return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}> 
          {/* Formulário com evento onSubmit manipulado pelo handleSubmit */}
 
         <div>
