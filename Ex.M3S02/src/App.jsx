@@ -5,6 +5,8 @@ import TaskList from './TaskList';                          // Importa o compone
 import RegisterForm from './RegisterForm';                  // Importa o componente do formulário de registro
 import { FormProvider } from './FormContext.jsx';
 import ValidationForm from './ValidationForm.jsx';            // Importa o formulário com validação
+import Counter from './Counter'; 
+
 
 function App() {
   // Componente raiz que envolve tudo com o ThemeProvider
@@ -31,18 +33,30 @@ function AppContent() {
   return (
     <div className="App" style={appStyle}>
       <h1>Aplicação Integrada com Contexto de Tema</h1>
-      <ThemeToggle />
+      <ThemeToggle /> {/* Componente para o usuário poder alternar entre temas claro e escuro */}
+
+        {/* Seção para o formulário de registro */}
       <section style={{ margin: '20px 0' }}>
         <h2>Formulário de Registro</h2>
         <RegisterForm />
       </section>
+
+{/* Seção para a lista de tarefas */}
       <section style={{ margin: '20px 0' }}>
         <h2>Lista de Tarefas</h2>
         <TaskList />
       </section>
+
+       {/* Seção para o formulário de validação */}
       <section style={{ margin: '20px 0' }}>
         <h2>Formulário de Validação</h2>
         <ValidationForm />
+      </section>
+
+  {/* Seção para o contador */}
+  <section style={{ margin: '20px 0' }}>
+        <h2>Contador</h2>
+        <Counter />  {/* Adiciona o componente Counter */}
       </section>
     </div>
   );
